@@ -177,6 +177,16 @@
     <ul id="menu" class="menu">
       
         
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-about">
           <a href="/about/" rel="section">
             
@@ -198,7 +208,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
@@ -310,24 +320,16 @@
       
         
           
-            <h3 id="Jython"><a href="#Jython" class="headerlink" title="Jython"></a>Jython</h3><p>Jython是运行在Java平台上的Python解释器，可以直接把Python代码编译成Java字节码执行。</p>
-<h2 id="list"><a href="#list" class="headerlink" title="list"></a>list</h2><p>list=[]<br>len() //长度<br>list[i  || -i] //访问元素<br>list.append(‘xxx’) //添加到末尾<br>classmates.insert(i, ‘xxx’) //添加到i<br>list.pop(i) //删除第i<br>list.replace(‘x’,’y’)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[x * x for x in range(1, 11) if x % 2 == 0] //[4, 16, 36, 64, 100]</span><br><span class="line">[m + n for m in &apos;ABC&apos; for n in &apos;XYZ&apos;] //[&apos;AX&apos;, &apos;AY&apos;, &apos;AZ&apos;, &apos;BX&apos;, &apos;BY&apos;, &apos;BZ&apos;, &apos;CX&apos;, &apos;CY&apos;, &apos;CZ&apos;]</span><br></pre></td></tr></table></figure></p>
-<h2 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h2><p>tuple=(1,) //一个元素</p>
-<h2 id="if"><a href="#if" class="headerlink" title="if"></a>if</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sum = 0</span><br><span class="line">n = 99</span><br><span class="line">while n &gt; 0:</span><br><span class="line">    sum = sum + n</span><br><span class="line">    n = n - 2</span><br><span class="line">print(sum) //while的循环</span><br></pre></td></tr></table></figure>
-<p>if //内部条件<br>break //跳出<br>continue //跳过</p>
-<h2 id="dict"><a href="#dict" class="headerlink" title="dict"></a>dict</h2><p>d=[“xxx”:v] //字典定义<br>‘xxx’ in d //判断key存在</p>
-<h2 id="set"><a href="#set" class="headerlink" title="set"></a>set</h2><p>s = set([])<br>s.add<br>s.remove</p>
-<h2 id="def"><a href="#def" class="headerlink" title="def"></a>def</h2><p>def xxx():<br>tab<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">def add_end(L=None):</span><br><span class="line">    if L **is** None:</span><br><span class="line">        L = []</span><br><span class="line">    L.append(&apos;END&apos;)</span><br><span class="line">    return L //一个不变的调用函数</span><br><span class="line"></span><br><span class="line">def fact(n):</span><br><span class="line">    if n==1:</span><br><span class="line">        return 1</span><br><span class="line">    return n * fact(n - 1) //一个递归</span><br></pre></td></tr></table></figure></p>
-<h2 id="generator"><a href="#generator" class="headerlink" title="generator"></a>generator</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">g=(~~~)</span><br><span class="line"></span><br><span class="line">def xxx ()</span><br><span class="line">yield x</span><br><span class="line"></span><br><span class="line">next(g)</span><br><span class="line"></span><br><span class="line">for n in g(i) //生成前i个</span><br></pre></td></tr></table></figure>
-<h2 id="map"><a href="#map" class="headerlink" title="map"></a>map</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def f(x):</span><br><span class="line">return x * x</span><br><span class="line"></span><br><span class="line">r = map(f, [1, 2, 3, 4, 5, 6, 7, 8, 9])</span><br><span class="line">list(r)</span><br><span class="line">[1, 4, 9, 16, 25, 36, 49, 64, 81]</span><br></pre></td></tr></table></figure>
-<h2 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">def is_odd(n):</span><br><span class="line">    return n % 2 == 1</span><br><span class="line"></span><br><span class="line">list(filter(is_odd, [1, 2, 4, 5, 6, 9, 10, 15]))</span><br><span class="line">//结果: [1, 5, 9, 15]</span><br></pre></td></tr></table></figure>
-<h2 id="notname-def"><a href="#notname-def" class="headerlink" title="notname def"></a>notname def</h2><p> f = lambda x: x * x</p>
-<h2 id="装饰器-偏函数"><a href="#装饰器-偏函数" class="headerlink" title="装饰器 偏函数"></a>装饰器 偏函数</h2><p>@@@@@@@@@@@@@@@@@@</p>
-<h2 id="class"><a href="#class" class="headerlink" title="class"></a>class</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line">    def __init__(self, name, score):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.score = score</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line">    ...</span><br><span class="line"></span><br><span class="line">    def get_grade(self):</span><br><span class="line">        if self.score &gt;= 90:</span><br><span class="line">            return &apos;A&apos;</span><br><span class="line">        elif self.score &gt;= 60:</span><br><span class="line">            return &apos;B&apos;</span><br><span class="line">        else:</span><br><span class="line">            return &apos;C&apos;</span><br><span class="line">//类的方法定义</span><br></pre></td></tr></table></figure>
-<p><code>_xxx</code> 视为私有<br><code>__xxx</code> 私有<br><code>__xxx__</code> 特殊变量</p>
-<h2 id="try"><a href="#try" class="headerlink" title="try"></a>try</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">try:</span><br><span class="line">    print(&apos;try...&apos;)</span><br><span class="line">    r = 10 / 0</span><br><span class="line">    print(&apos;result:&apos;, r)</span><br><span class="line">except ZeroDivisionError as e:</span><br><span class="line">    print(&apos;except:&apos;, e)</span><br><span class="line">else</span><br><span class="line">    xxxxxxxxxxxx</span><br><span class="line">finally:</span><br><span class="line">    print(&apos;finally...&apos;)</span><br><span class="line">print(&apos;END&apos;)</span><br></pre></td></tr></table></figure>
-          
+          JythonJython是运行在Java平台上的Python解释器，可以直接把Python代码编译成Java字节码执行。
+listlist=[]len() //长度list[i  || -i] //访问元素list.append(‘xxx’) //添加到末尾classmates.insert(i, 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/03/06/python入门笔记/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -445,9 +447,15 @@
       
         
           
-            <p>高楼林立，不见天日。在这万座高楼之中，有一处显得格外特殊。约摸只有一层楼那么高，四下都被高楼遮住，你若是从外外面看去，是觉找不到此处的。一个穿着西服打着领带的人，对我说到。那你让我去个jibo啊。这不是我家主子打发我来给您带路嘛。（主子，现在居然还有人用清朝的说法）得，言子，那我们走吧，我对着沙发上躺着玩游戏的言琰。来，你头里带路。<br>我给言子使了个眼色，他把手机揣口袋里，便一溜烟跟到我身后来。只见门外停着一辆加长的林肯，卧槽，言子，今天请咋们的，不是一般的主儿。一路无话，这车带着我们在京城里，是可劲的转，大约半个小时，终于停在了，一栋万达楼下。我们随他进了楼，是一路穿楼而过，只到了一个房间门口，上写，办公重地，闲人免进。这不就是个办公室么，说的那么邪乎。我推门往里走，里边是楼梯间，黑压压的，大约10来m的样子。俩位爷里边请。说着他一推门，站在一旁。就推开一个小缝，我一闪身便进去。言子随后跟上来。<br>只见，俩只石狮子是端端正正，中合一大门，上写，摘灵宝地，朱红漆的大门，房檐上是黄砖绿瓦，好不气派。（这高楼丛中，怎么会有这样的别院，刚刚那人叫主子，这宅子又是明清的建制，难不成，是清朝遗脉）我刚想罢。吱呀。门分左右，出来一人，二爷快请，我家主子久等了。我入得门去，里面也是清朝的建制，先是一块屏风石，然后是游廊，挂着各样的鸟儿，俩边是各式各样的花草。不一会，来到一间平房前头。这伙计一推门，便立在门口。<br>我推门而进，房子里，没什么家具，应该是书房，只有一张长条桌，连凳子都没有，此时，一人正在桌前是笔走龙蛇。细细打量，这人身着唐装（清朝，唐装？），头发全白，手上还带着一串菩提。眼睛盯着桌子，似乎没发现有人进来。不一会，他抬头观瞧说，哎呀，听说，许先生是行家，快来看看，我这写的怎么样啊。我便来到桌前，看了看纸上的字，上写，为国为民。哈哈哈，老先生，我是才疏学浅，也不知道，你这字怎么样。不过，您这为国为民，我可担待不起，我就是个小人物。您为国为民就好。啪，他一摔镇纸。小人物，恐怕只有许先生自己这么想吧。哈哈哈，您说笑了。得了，您有事就说事。好，痛快，锁龙井。勘察情况，酬劳你说了算。锁龙井，锁龙井怎么了，好好的，勘察什么。许先生，据我所知，以前你接活，话没这么多。珸儿，进来。他说罢，门外便有人进来，我刚想回头看，一把刀就架在我脖子上，我转头一看，言子也是如此。今天你去也得去，不去，也得去。您看你这话说的，我也没说我不去啊。我去，我去还不行吗？好，那我就相信许先生，一言既出驷马难追。珸儿，把刀放下。觉得脖子刀口松了，我才敢回头看。（好美。。。）披肩黑发，媚眼如丝，樱口锆齿。上身穿着白色的衬衣，胸部也跃跃欲试。在往下看去，忽然亮光一闪。好看吗？再看我就让你在什么也看不见。（好凶的女孩）珸儿，不要无理。许先生，你们要什么装备，还有资料，问她要就好了。她会全力配合你的。走吧，俩位，我们回去准备。</p>
-
-          
+          高楼林立，不见天日。在这万座高楼之中，有一处显得格外特殊。约摸只有一层楼那么高，四下都被高楼遮住，你若是从外外面看去，是觉找不到此处的。一个穿着西服打着领带的人，对我说到。那你让我去个jibo啊。这不是我家主子打发我来给您带路嘛。（主子，现在居然还有人用清朝的说法）得，言子，那我们走吧，我对着沙发上
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/03/06/陌生人的邀请/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -565,9 +573,15 @@
       
         
           
-            <p>看着这世界的爱情<br>早上七点多开始睡觉，是被中午的闹钟叫醒的，拖着疲惫的身子，打算去吃饭，然后洗澡，摇摇摆摆的走进一家店里。我刚刚点过东西坐下，就看着一位身穿美团制服的男人走进来，大约30多岁。身后跟着一位妇女，年龄相近。长相确是不敢恭维。男人似乎说了句“我带你来店里尝尝”。应该是这位先生，平时经常送这里的外卖吧，男士点了一个毛血旺，是这里最贵的锅。女士点了一个黄焖鸡，是最便宜的。然后，俩个人开始默默的吃起来。没有一句交流，不久，男士要了一瓶啤酒。然后又开始一言不发，自己吃着自己锅里的东西。像是俩个拼坐的人。我转过头去，觉得情节不会在有什么变化了。男人突然说了一句“你少吃点饭，多吃点肉”女人嘟囔了一句，没听清楚。然后，继续刚刚的桥段。直到来个人吃完了，女人才付了钱。让我想起，我刚到东秦的时候，晚上经常会出去吃东西，有一个摆摊的夫妇，感觉20多岁吧，男人炸串，女人做手抓饼。我一般都会去吃。总觉得。莫名其妙的感觉，不得已，就走到了面前。第二年，他们走了，我在也没见到，不知道去哪了。我总会见到这样的夫妻，他们面对的人间的苦难。但是，我总隐约的觉得，这不是爱情。即使你啊，让我漫天遍野的白色尘埃，变成了六角的玉珏。似乎，这里有我能想到的所有的爱情。这世界不过就是这样。喜欢的人得不到，得到了不珍惜，在一起时怀疑，失去了怀念，怀念的想相见，相见的又恨晚。终其一生，满是遗憾。<br>收起</p>
-
-          
+          看着这世界的爱情早上七点多开始睡觉，是被中午的闹钟叫醒的，拖着疲惫的身子，打算去吃饭，然后洗澡，摇摇摆摆的走进一家店里。我刚刚点过东西坐下，就看着一位身穿美团制服的男人走进来，大约30多岁。身后跟着一位妇女，年龄相近。长相确是不敢恭维。男人似乎说了句“我带你来店里尝尝”。应该是这位先生，平时经常送这
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/03/06/看着爱情/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -685,10 +699,15 @@
       
         
           
-            <p>早   集市<br>揉揉眼睛，吊儿郎当的走在集市上。这条街道，他是家乡的集市，从我记事起，就是了。10年前，陪母亲来买菜，到今日。他似乎没什么变化。听闻中途，因为城市建设，新键菜市场，这里被整顿过一段日子。后来，他又慢慢复活了。这段故事，我不大知晓。只是今日我见他时，他仍然是生龙活虎。<br>街道本来就不宽，俩边是鳞次栉比的小摊贩，有大有小，有长有短。参差起伏，错落有秩。<br>边走边注意这地面，视角里，黑色的柏油路面，变成褐色或是深蓝色的布料，一块方方正正的布面，在往上，便是白白绿绿，红红紫紫的，一堆堆。大多还带着春泥，只是布角，确实有点褶皱。后边是个小马扎，端端正正的放着，大约是些灰的中山装，带着帽子。黝黑的皮肤，折这深深的皱纹。也不吆喝，就是端端正正的坐着，些许弯着腰，可能是太累了。只有有人过来买菜，有人讲价，他才会慢慢悠悠的站起来。脸上的神情么，似乎是有点不情愿。大概不是因为挣钱少了，而是，他的哪些五颜六色，确实值这个价钱，又何必砍价呢。<br>这吵吵嚷嚷的地方，混杂着鸡叫声，这是只有新春时节，过年的时候，才会出现的声响。鸡都是活的，您什么时候买，你便去挑一只来。给他指指，就看见绿色的军大衣，一动不动，忽然出手，一把抓住鸡，又反过来，不知从那变出一个长长的布条，下一秒，俩只鸡爪就被绑的纹丝不动，然后赶紧挂在秤杆上，喊一声，您看高高的。直到现在，我都不知道，他抓的是那，又是怎么绑的。怕是传承的技艺。只要你说一声好，啪，摔到案子上，按住鸡头，经部划开一个小口，插入鸡毛。这边有一直煮着的开水锅，一把按进去，不消一会。边抄边拔，这在次落在案子上时，鸡毛已经除去了。收拾好鸡，用这边的布子擦擦手，说是布子，但是确实被冻成结结实实的硬块，随手蹭俩下，便又得一动不动了。<br>自然了，也有穿着像顾客一样的卖家，这一类，大部分摊位后面，停着一辆面包车。敞开后备箱，摆出物品来，一般傍边还会配着一个喇叭，“带鱼，带鱼”，词语及其简单，确是高亢，重复。眼里尽是无奈，为什么无奈啊，我猜，是因为这小小的街道太窄了。是啊，确实太窄了，过了一辆霸道，从路中间走过，车轮，便要压着俩边的摊位了。</p>
-<hr>
-
-          
+          早   集市揉揉眼睛，吊儿郎当的走在集市上。这条街道，他是家乡的集市，从我记事起，就是了。10年前，陪母亲来买菜，到今日。他似乎没什么变化。听闻中途，因为城市建设，新键菜市场，这里被整顿过一段日子。后来，他又慢慢复活了。这段故事，我不大知晓。只是今日我见他时，他仍然是生龙活虎。街道本来就不宽，俩边是
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/03/06/春/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -766,7 +785,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/">
+                <a href="/archives/">
               
                   <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">posts</span>
